@@ -554,7 +554,6 @@ void XcbGetworkClient::submitSolution(const Solution& solution)
         jReq["params"] = Json::Value(Json::arrayValue);
         jReq["params"].append("0x" + nonceHex);
         jReq["params"].append("0x" + solution.work.header.hex());
-        jReq["params"].append("0x" + solution.mixHash.hex());
         send(jReq);
     }
 
